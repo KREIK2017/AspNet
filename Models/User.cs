@@ -5,7 +5,7 @@ namespace AspNetMVC.Models
     {
         public string Name { get; set; }
         public int Age { get; set; }
-        public List<Product> Products { get; set; }
+        public List<OrderProduct> Products { get; set; }
     }
 
 }

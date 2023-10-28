@@ -33,6 +33,12 @@ app.UseEndpoints(endpoints =>
         name: "download-file",
         pattern: "File/DownloadFile",
         defaults: new { controller = "File", action = "Index" });
+
+    endpoints.MapControllerRoute(
+        name: "product",
+        pattern:"Product/Index",
+        defaults: new { controller = "Product", action = "Index" });
+
 });
 
 app.Run();

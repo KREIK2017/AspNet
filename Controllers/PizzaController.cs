@@ -14,11 +14,11 @@ public class PizzaController : Controller
     {
         if (user.Age >= 16)
         {
-            var products = new List<Product>
+            var products = new List<OrderProduct>
             {
-                new Product { Name = "Маргарита", Quantity = 0 },
-                new Product { Name = "Пепероні", Quantity = 0 },
-                new Product { Name = "Вегетаріанська", Quantity = 0 }
+                new OrderProduct { Name = "Маргарита", Quantity = 0 },
+                new OrderProduct { Name = "Пепероні", Quantity = 0 },
+                new OrderProduct { Name = "Вегетаріанська", Quantity = 0 }
             };
             user.Products = products; // Присвоїти продукти користувачеві
             return View("OrderPizza", user);
@@ -37,7 +37,7 @@ public class PizzaController : Controller
     }
 
     [HttpPost]
-    public IActionResult OrderSummary(List<Product> products)
+    public IActionResult OrderSummary(List<OrderProduct> products)
     {
         return View(products);
     }
