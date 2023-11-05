@@ -28,3 +28,6 @@ D:\програмування\AspNetMVC\AspNetMVC\obj\Debug\net6.0\refint\AspNet
 D:\програмування\AspNetMVC\AspNetMVC\obj\Debug\net6.0\AspNetMVC.pdb
 D:\програмування\AspNetMVC\AspNetMVC\obj\Debug\net6.0\AspNetMVC.genruntimeconfig.cache
 D:\програмування\AspNetMVC\AspNetMVC\obj\Debug\net6.0\ref\AspNetMVC.dll
+D:\програмування\AspNetMVC\AspNetMVC\obj\Debug\net6.0\AspNetMVC.csproj.AssemblyReference.cache
+D:\програмування\AspNetMVC\AspNetMVC\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\програмування\AspNetMVC\AspNetMVC\obj\Debug\net6.0\AspNetMVC.csproj.CopyComplete
