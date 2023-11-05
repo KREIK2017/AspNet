@@ -1,30 +1,27 @@
-﻿@model List<Product>
+﻿﻿@using AspNetMVC.Models
+@{
 
-<h2>Product List</h2>
+    List<ProductModel> products = new List<ProductModel>();
 
-<h3>List View</h3>
-<ul>
-    @foreach (var product in Model)
-    {
-        <li>@product.ID. @product.Name - @product.Price$ (@product.CreatedDate)</li>
-    }
-</ul>
 
-<h3>Table View</h3>
-<table class="table">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Created Date</th>
-    </tr>
-    @foreach (var product in Model)
-    {
-        <tr>
-            <td>@product.ID</td>
-            <td>@product.Name</td>
-            <td>@product.Price$</td>
-            <td>@product.CreatedDate</td>
-        </tr>
-    }
-</table>
+    products.Add(new ProductModel { ID = 1, Name = "Продукт 1", Price = 10.99M });
+    products.Add(new ProductModel { ID = 2, Name = "Продукт 2", Price = 19.99M });
+    products.Add(new ProductModel { ID = 3, Name = "Продукт 3", Price = 5.49M });
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="width=device-width" />
+    <title>Завдання</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <div>
+        @await Component.InvokeAsync("Product", new {products=products})
+    </div>
+    <div>
+        @await Component.InvokeAsync("Weather", new {region="Odesa"})
+    </div>
+</body>
+</html>
