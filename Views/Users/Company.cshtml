@@ -1,0 +1,39 @@
+﻿@model IEnumerable<AspNetMVC.Models.CompanyModel>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width" />
+	<title>Форма</title>
+</head>
+<body>
+	<div class="main">
+		<div class="container">
+			<h2>Список компаній</h2>
+			<form asp-action="ViewRSRSCompany" asp-controller="Users" method="post">
+
+			<table class="table">
+
+				<tr>
+					<th>#</th> 
+					<th>Назва</th>  
+					<th>Рік створеня</th>  
+					<th>Тип продукції</th> 
+				</tr>
+
+				@foreach (var item in Model)
+				{
+
+					<tr>
+						<td>@item.Id</td>
+						<td>@item.Name</td>
+						<td>@item.FoundationYear</td>
+						<td>@item.ProductionType</td>
+					</tr>
+
+				}
+			</table>
+			</form>
+		</div>
+	</div>
+</body>
