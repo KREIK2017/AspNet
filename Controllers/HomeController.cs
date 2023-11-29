@@ -1,9 +1,10 @@
 ﻿using AspNetMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-
+using AspNetMVC.Filters;
 namespace AspNetMVC.Controllers
 {
+    [SimpleResourceFilter]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
